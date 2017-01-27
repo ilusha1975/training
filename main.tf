@@ -50,7 +50,7 @@ resource "aws_instance" "web" {
   tags = {
     Identity      = "autodesk-bass"
     SomeOtherTag  = "some other tag value"
-    YetAnotherTag = "Whatever3"
+    YetAnotherTag = "Whatever4"
     Name = "web ${count.index + 1}/${var.num_webs}"
   }
 }
