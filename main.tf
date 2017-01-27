@@ -40,7 +40,7 @@ provider "aws" {
   region     = "${var.aws_region}"
 }
 
-resource_zzz "aws_instance" "web" {
+resource "aws_instance" "web" {
   count                  = "${var.num_webs}"
   ami                    = "ami-30217250"
   instance_type          = "t2.micro"
