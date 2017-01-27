@@ -31,7 +31,7 @@ variable aws_region {
 }
 
 variable "num_webs" {
-	default = "2"
+	default = "1"
 }
 
 provider "aws" {
@@ -50,7 +50,7 @@ resource "aws_instance" "web" {
   tags = {
     Identity      = "autodesk-bass"
     SomeOtherTag  = "some other tag value"
-    YetAnotherTag = "Whatever"
+    YetAnotherTag = "Whatever2"
     Name = "web ${count.index + 1}/${var.num_webs}"
   }
 }
